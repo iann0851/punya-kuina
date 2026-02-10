@@ -147,8 +147,23 @@ button:hover {
     transform: translateY(-50px);
     transition-delay: 0.5s;
 }
+#nextBtn {
+    background-color: #4CAF50; /* Warna hijau untuk tombol next */
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
 
-  
+#nextBtn:hover {
+    background-color: #45a049;
+}
+
+
 .night {
   position: fixed;
   left: 50%;
@@ -879,7 +894,7 @@ button:hover {
     transparent,
     var(--dark-color) 60%
   );
-  -webkit-mask-image: linear-gradient(to top, transparent 30%, #147a33 60%);
+  -webkit-maskimage: linear-gradient(to top, transparent 30%, #147a33 60%);
 }
 .flower__g-right--1 {
   -webkit-animation: flower-g-right-ans 2.5s linear infinite;
@@ -1129,7 +1144,7 @@ button:hover {
   height: 40vmin;
   border-top-left-radius: 100%;
   border-left: 2vmin solid #079097;
-  -webkit-mask-image: linear-gradient(to top, transparent 25%, #079097 50%);
+  -webkit-maskimage: linear-gradient(to top, transparent 25%, #079097 50%);
   position: relative;
   z-index: 1;
 }
@@ -1147,7 +1162,7 @@ button:hover {
       var(--dark-color) 98%
     ),
     linear-gradient(to bottom right, #23f0ff 45%, transparent 50%, transparent);
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     135deg,
     #159faa 40%,
     transparent 50%,
@@ -1281,7 +1296,7 @@ button:hover {
   transform: scale(0.8) rotate(-5deg);
 }
 .long-g--1 .leaf {
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     to top,
     transparent 40%,
     #079097 80%
@@ -1302,7 +1317,7 @@ button:hover {
 }
 .long-g--2 .leaf,
 .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     to top,
     transparent 50%,
     #079097 80%
@@ -1318,7 +1333,7 @@ button:hover {
   bottom: 0vmin;
 }
 .long-g--3 .leaf {
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     to top,
     transparent 40%,
     #079097 80%
@@ -1331,7 +1346,7 @@ button:hover {
   transform: scale(0.6) rotateX(60deg);
 }
 .long-g--4 .leaf {
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     to top,
     transparent 50%,
     #079097 80%
@@ -1367,7 +1382,7 @@ button:hover {
   height: var(--h);
   border-top-left-radius: 100%;
   border-left: 2vmin solid var(--c);
-  -webkit-mask-image: linear-gradient(
+  -webkit-maskimage: linear-gradient(
     to top,
     transparent 20%,
     var(--dark-color)
@@ -1679,111 +1694,7 @@ button:hover {
     transform: scale(0);
   }
 }
-.spotify-embed {
-    margin-top: 25px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.spotify-embed.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.wrapper.open .spotify-embed {
-    animation: fadeInUp 0.5s ease 1s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-style.css
-/* TAMBAHKAN INI DI BAGIAN PALING AKHIR FILE, SEBELUM .container * */
-
-.spotify-embed {
-    margin-top: 25px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.spotify-embed.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.wrapper.open .spotify-embed {
-    animation: fadeInUp 0.5s ease 1s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Tambahkan transition untuk amplop */
-.envelope {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-top: 100px solid transparent;
-    border-right: 150px solid #FFD3DA;
-    border-bottom: 100px solid #FFD3DA;
-    border-left: 150px solid #FFC0CB;
-    z-index: 3;
-    transition: opacity 0.5s ease-in-out; /* Ditambahkan */
-}
-
-/* Perbaiki animasi untuk .open */
-.open .lid.one {
-    transform: rotateX(90deg) !important;
-    transition-delay: 0s !important;
-}
-
-.open .lid.two {
-    transform: rotateX(180deg) !important;
-    transition-delay: 0.25s !important;
-}
-
-.open .letter {
-    transform: translateY(-50px) !important;
-    transition-delay: 0.5s !important;
-}
-
-.open .envelope {
-    opacity: 0 !important;
-}
-
-/* KODE ASLI DI BAWAH INI TETAP ADA */
 .container * {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
-}
+} 
